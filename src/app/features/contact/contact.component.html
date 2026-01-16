@@ -1,0 +1,77 @@
+<section
+  class="min-h-screen bg-black px-6 sm:px-12 lg:px-32 xl:px-48 py-24 flex items-center"
+>
+  <div class="max-w-4xl p-10 mx-auto w-full">
+    <!-- Heading -->
+    <h2 class="text-4xl font-bold text-white mb-6 flex items-center gap-4">
+      <span class="w-10 h-[3px] bg-purple-500"></span>
+      Get In Touch
+    </h2>
+
+    <!-- CTA Text -->
+    <p class="text-gray-300 leading-relaxed max-w-2xl mb-10">
+      I’m open to
+      <span class="text-white font-semibold"
+        >internships, Software engineering roles</span
+      >, and
+      <span class="text-white font-semibold">collaborative projects</span>. If
+      you’re looking for a motivated software developer with a strong foundation
+      and growth mindset, let’s connect.
+    </p>
+
+    <!-- Contact Cards -->
+    <div class="grid sm:grid-cols-2 gap-6 mb-12">
+      <!-- Email -->
+      <a
+        href="mailto:{{ email }}"
+        class="group border border-white/10 rounded-2xl p-6 bg-white/5 hover:bg-purple-500/10 transition-all duration-300"
+      >
+        <p class="text-sm text-gray-400 mb-1">Email</p>
+        <p class="text-white font-medium group-hover:text-purple-400">
+          {{ email }}
+        </p>
+      </a>
+
+      <!-- GitHub -->
+      <a
+        [href]="github"
+        target="_blank"
+        class="group border border-white/10 rounded-2xl p-6 bg-white/5 hover:bg-purple-500/10 transition-all duration-300"
+      >
+        <p class="text-sm text-gray-400 mb-1">GitHub</p>
+        <p class="text-white font-medium group-hover:text-purple-400">
+          github.com/Ayesha-Javaidd
+        </p>
+      </a>
+
+      <!-- LinkedIn -->
+      <a
+        [href]="linkedin"
+        target="_blank"
+        class="group border border-white/10 rounded-2xl p-6 bg-white/5 hover:bg-purple-500/10 transition-all duration-300"
+      >
+        <p class="text-sm text-gray-400 mb-1">LinkedIn</p>
+        <p class="text-white font-medium group-hover:text-purple-400">
+          linkedin.com/in/ayesha-javaid
+        </p>
+      </a>
+
+      <!-- Resume -->
+      <a
+        href="/assets/resume.pdf"
+        download
+        class="group border border-white/10 rounded-2xl p-6 bg-white/5 hover:bg-purple-500/10 transition-all duration-300"
+      >
+        <p class="text-sm text-gray-400 mb-1">Resume</p>
+        <p class="text-white font-medium group-hover:text-purple-400">
+          Download Resume
+        </p>
+      </a>
+    </div>
+
+    <!-- Footer CTA -->
+    <p class="text-gray-500 text-sm">
+      Prefer email? Reach out directly — I usually respond within 24 hours.
+    </p>
+  </div>
+</section>

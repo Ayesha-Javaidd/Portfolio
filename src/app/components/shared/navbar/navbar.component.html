@@ -1,0 +1,49 @@
+<nav class="fixed top-0 w-full bg-black/90 backdrop-blur-md border-b py-2 z-50">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+    <!-- Logo -->
+    <div class="flex items-center gap-2">
+      <div
+        class="w-9 h-9 rounded-lg bg-purple-600 flex items-center justify-center font-bold text-white"
+      >
+        A
+      </div>
+      <span class="text-white font-bold text-lg tracking-wide">Ayesha</span>
+    </div>
+
+    <!-- Links -->
+    <div class="hidden md:flex gap-8 text-gray-300">
+      <a
+        routerLink="/"
+        routerLinkActive="text-purple-500"
+        [routerLinkActiveOptions]="{ exact: true }"
+        class="hover:text-purple-400 transition"
+        >Home</a
+      >
+      <a
+        routerLink="/skills"
+        routerLinkActive="text-purple-500"
+        [routerLinkActiveOptions]="{ exact: true }"
+        class="hover:text-purple-400 transition"
+        >Skills</a
+      >
+      <a
+        routerLink="/projects"
+        routerLinkActive="text-purple-500"
+        [routerLinkActiveOptions]="{ exact: true }"
+        class="hover:text-purple-400 transition"
+        >Work</a
+      >
+      <a
+        routerLink="/contact"
+        routerLinkActive="text-purple-500"
+        [routerLinkActiveOptions]="{ exact: true }"
+        class="hover:text-purple-400 transition"
+        >Contact</a
+      >
+
+      <a href="/assets/resume.pdf" class="hover:text-purple-400 transition">
+        Resume
+      </a>
+    </div>
+  </div>
+</nav>
