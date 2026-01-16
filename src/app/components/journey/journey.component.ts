@@ -9,24 +9,24 @@ import { CommonModule } from '@angular/common';
   styleUrl: './journey.component.css',
 })
 export class JourneyComponent {
-  skills = [
-    // Frontend
-    { icon: 'fab fa-js', label: 'JavaScript' },
+  frontendSkills = [
     { icon: 'fab fa-angular', label: 'Angular' },
     { icon: 'fab fa-react', label: 'React' },
+    { icon: 'fab fa-js', label: 'JavaScript' },
+    { icon: 'fab fa-html5', label: 'HTML5' },
+    { icon: 'fab fa-phone', label: 'flutter' },
+    { icon: 'fab fa-css3-alt', label: 'CSS / Tailwind' },
+  ];
 
-    // Backend
-    { icon: 'fab fa-java', label: 'Java' },
+  backendSkills = [
     { icon: 'fab fa-python', label: 'Python' },
-    { icon: 'fas fa-code', label: 'C#' },
-    { icon: 'fab fa-node-js', label: 'Node.js' },
-    { icon: 'fas fa-bolt', label: 'FastAPI' },
-
-    // Databases
-    { icon: 'fas fa-database', label: 'SQL' },
+    { icon: 'fas fa-database', label: 'MySQL' },
     { icon: 'fas fa-leaf', label: 'MongoDB' },
-
-    // Tools
-    { icon: 'fab fa-git-alt', label: 'Git' },
+    { icon: 'fab fa-node-js', label: 'Express.js' },
+    { icon: 'fas fa-fire', label: 'Firebase' },
+    { icon: 'fab fa-java', label: 'Java' },
+    { icon: 'fas fa-code', label: 'C# / .NET' },
+    { icon: 'fas fa-server', label: 'REST APIs' },
+    { icon: 'fas fa-shield-alt', label: 'Auth & Security' },
   ];
 }

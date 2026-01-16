@@ -1,49 +1,135 @@
-<nav class="fixed top-0 w-full bg-black/90 backdrop-blur-md border-b py-2 z-50">
-  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+<nav
+  class="fixed top-0 left-0 w-full bg-black/90 backdrop-blur-md border-b py-2 z-50 overflow-hidden"
+>
+  <div
+    class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center flex-wrap"
+  >
     <!-- Logo -->
     <div class="flex items-center gap-2">
       <div
-        class="w-9 h-9 rounded-lg bg-purple-600 flex items-center justify-center font-bold text-white"
+        class="w-9 h-9 rounded-lg bg-pink-500/40 flex items-center justify-center font-bold text-white"
       >
         A
       </div>
       <span class="text-white font-bold text-lg tracking-wide">Ayesha</span>
     </div>
 
-    <!-- Links -->
-    <div class="hidden md:flex gap-8 text-gray-300">
+    <!-- Desktop Links -->
+    <div class="hidden md:flex gap-8 text-gray-300 flex-wrap">
       <a
         routerLink="/"
-        routerLinkActive="text-purple-500"
+        routerLinkActive="text-pink-500/70"
         [routerLinkActiveOptions]="{ exact: true }"
-        class="hover:text-purple-400 transition"
+        class="hover:text-pink-500/40 transition"
         >Home</a
       >
       <a
         routerLink="/skills"
-        routerLinkActive="text-purple-500"
+        routerLinkActive="text-pink-500/70"
         [routerLinkActiveOptions]="{ exact: true }"
-        class="hover:text-purple-400 transition"
+        class="hover:text-pink-500/40 transition"
         >Skills</a
       >
       <a
         routerLink="/projects"
-        routerLinkActive="text-purple-500"
+        routerLinkActive="text-pink-500/70"
         [routerLinkActiveOptions]="{ exact: true }"
-        class="hover:text-purple-400 transition"
+        class="hover:text-pink-500/40 transition"
         >Work</a
       >
       <a
         routerLink="/contact"
-        routerLinkActive="text-purple-500"
+        routerLinkActive="text-pink-500/70"
         [routerLinkActiveOptions]="{ exact: true }"
-        class="hover:text-purple-400 transition"
+        class="hover:text-pink-500/40 transition"
         >Contact</a
       >
+      <a href="/assets/resume.pdf" class="hover:text-pink-500/40 transition"
+        >Resume</a
+      >
+    </div>
 
-      <a href="/assets/resume.pdf" class="hover:text-purple-400 transition">
-        Resume
-      </a>
+    <!-- Mobile Hamburger -->
+    <div class="md:hidden">
+      <button
+        (click)="isOpen = !isOpen"
+        class="focus:outline-none text-gray-300 hover:text-pink-500/40 transition"
+      >
+        <svg
+          *ngIf="!isOpen"
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-6 w-6"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"
+          />
+        </svg>
+        <svg
+          *ngIf="isOpen"
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-6 w-6"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M6 18L18 6M6 6l12 12"
+          />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div *ngIf="isOpen" class="md:hidden bg-black/95 backdrop-blur-md border-t">
+    <div class="flex flex-col gap-4 px-6 py-4 text-gray-300">
+      <a
+        routerLink="/"
+        routerLinkActive="text-pink-500/70"
+        [routerLinkActiveOptions]="{ exact: true }"
+        (click)="isOpen = false"
+        class="hover:text-pink-500/40 transition"
+        >Home</a
+      >
+      <a
+        routerLink="/skills"
+        routerLinkActive="text-pink-500/70"
+        [routerLinkActiveOptions]="{ exact: true }"
+        (click)="isOpen = false"
+        class="hover:text-pink-500/40 transition"
+        >Skills</a
+      >
+      <a
+        routerLink="/projects"
+        routerLinkActive="text-pink-500/70"
+        [routerLinkActiveOptions]="{ exact: true }"
+        (click)="isOpen = false"
+        class="hover:text-pink-500/40 transition"
+        >Work</a
+      >
+      <a
+        routerLink="/contact"
+        routerLinkActive="text-pink-500/70"
+        [routerLinkActiveOptions]="{ exact: true }"
+        (click)="isOpen = false"
+        class="hover:text-pink-500/40 transition"
+        >Contact</a
+      >
+      <a
+        href="/assets/resume.pdf"
+        (click)="isOpen = false"
+        class="hover:text-pink-500/40 transition"
+        >Resume</a
+      >
     </div>
   </div>
 </nav>
